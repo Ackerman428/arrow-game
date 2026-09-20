@@ -1,0 +1,21 @@
+.board-wrap {
+  overflow: hidden;
+  touch-action: none;
+  cursor: grab;
+}
+
+.board-wrap:active {
+  cursor: grabbing;
+}
+
+.maze-board {
+  transform-origin: center center;
+  transition: none;
+  will-change: transform;
+}
+
+.grid-dot {
+  fill: #74768a;
+  opacity: .52;
+  pointer-events: none;
+}

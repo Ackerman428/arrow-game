@@ -1,0 +1,11 @@
+{
+  "name": "箭头突围",
+  "short_name": "箭头突围",
+  "description": "找出出口畅通的彩色箭头，逐一清空迷宫。",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#d9dcfa",
+  "theme_color": "#d9dcfa",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

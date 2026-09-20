@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#d9dcfa"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="箭头突围">
+  <meta name="description" content="找出出口畅通的彩色箭头，逐一清空迷宫。"><link rel="manifest" href="manifest.json"><link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="apple-touch-icon" href="icon.svg"><link rel="stylesheet" href="app.css"><link rel="stylesheet" href="reference.css"><link rel="stylesheet" href="mobile-v35.css"><title>箭头突围</title>
+</head>
+<body>
+  <main class="game-shell">
+    <header class="top-panel">
+      <nav class="quick-actions" aria-label="快捷操作">
+        <button class="quick-action" id="settingsButton" aria-label="设置"><span class="action-icon mint">⚙</span><span>设置</span></button>
+        <button class="quick-action" id="feedbackButton" aria-label="反馈"><span class="action-icon yellow">•••</span><span>反馈</span></button>
+        <button class="quick-action" id="themeButton" aria-label="切换主题"><span class="action-icon blue">✦</span><span>主题</span></button>
+      </nav>
+      <section class="level-status" aria-label="关卡状态"><h1 style="margin-bottom:17px">第 <span id="levelValue">1</span> 关</h1><div class="hearts" id="livesValue" aria-label="3 次机会"><i></i><i></i><i></i></div></section>
+    </header>
+    <section class="play-area"><div class="board-wrap" id="boardWrap"><svg id="board" class="maze-board" viewBox="0 0 36 72" preserveAspectRatio="xMidYMid meet" role="grid" aria-label="彩色箭头迷宫"></svg><div class="empty-state" id="emptyState" aria-hidden="true"><span>✓</span><strong>全部清空</strong></div></div></section>
+    <footer class="bottom-panel">
+      <button class="booster-button" id="shuffleButton" aria-label="重新排列"><span class="booster-stack">▦</span><b>0</b></button>
+      <div class="zoom-control" aria-label="棋盘缩放"><button id="zoomOut" aria-label="缩小">−</button><input id="zoomSlider" type="range" min="80" max="350" value="100" aria-label="缩放比例"><button id="zoomIn" aria-label="放大">＋</button></div>
+      <button class="hint-button" id="hintButton"><span>☀</span><b>提示</b></button>
+    </footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="sheet" id="settingsSheet" aria-hidden="true"><div class="sheet-card" role="dialog" aria-modal="true" aria-labelledby="settingsTitle"><button class="sheet-close" id="settingsClose" aria-label="关闭">×</button><h2 id="settingsTitle">游戏设置</h2><label><span>音效与音乐</span><input id="soundSwitch" type="checkbox" checked></label><label><span>震动反馈</span><input id="vibrationSwitch" type="checkbox" checked></label><button class="reset-button" id="resetButton">重新开始本关</button></div></div>
+  <script src="game-v36.js"></script>
+</body></html>
